@@ -8,6 +8,11 @@ CC = gcc
 CFLAGS = -g -Wall
 LDFLAGS = -lpthread
 
+
+test: mini_echo.c
+	$(CC) $(CFLAGS) mini_echo.c -o mini_echo && ./mini_echo
+
+
 all: proxy
 
 csapp.o: csapp.c csapp.h
